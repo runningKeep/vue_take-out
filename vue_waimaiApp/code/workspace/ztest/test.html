@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let score = 2.9
+    const starState =[]
+    // for(i=0;i<5;i++){
+    let ifhalf = score-parseInt(score)
+      for(s=1;s<=score;s++){
+        starState.push('on')
+      };
+      if(ifhalf>=0.5){
+        starState.push('half')
+      };
+      while(starState.length<5){
+        starState.push('off')
+      }
+    // }
+    console.log(starState)
+   
+  </script>
+</body>
+</html>

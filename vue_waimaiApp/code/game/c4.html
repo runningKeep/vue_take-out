@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .box{
+      background-color: rgb(253, 252, 252);
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+    }
+    .board{
+      display: flex;
+      margin: 0 auto; 
+      background-color: rgb(209, 206, 206);
+      width: 2200px;
+      justify-content: space-around
+    }
+    .column{
+      /* left: 100px; */
+      /* margin-left: 100px; */
+    }
+    .column .box{
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="board">
+  <div class="column" id="1">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div></div>
+  <div class="column" id="2">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class="column" id="3">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class="column" id="4">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class="column" id="5">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class="column" id="6">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class="column" id="7">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+
+  <script>
+
+    let count = 1 
+    const arr = ['#1','#2','#3','#4','#5','#6','#7',]
+    arr.forEach((col) =>{
+      let x=5
+      $(col).click(function(){ 
+      const f = $(col).children()[x]
+      if(count%2==0){
+        $(f).css('background', "blue")
+      }else{
+        $(f).css('background', "red")
+      }  
+      x--
+      count++
+    })
+    })
+
+
+    $('#1').click(function(){
+      // console.log($('#1').children)
+      // $('#1').children.css({background: "blue"})
+      
+      const f = $('#1').children()[x]
+      // $('#1').children().css('background', "blue")
+      // f.css('background', "blue")
+      console.log(f)
+      $(f).css('background', "blue")
+      x--
+    })
+    // console.log($('#1').children())
+  </script>
+</body>
+</html>
